@@ -1,0 +1,142 @@
+.search-table-container {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.search-box-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 241px;
+}
+
+.search-box {
+  width: 100%;
+  height: 38px;
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(206, 212, 218);
+  padding: 6px 12px;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.search-box:focus {
+  border-color: #7952b3;
+  box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
+}
+
+.search-box:disabled {
+  background-color: rgb(233, 236, 239);
+  cursor: not-allowed;
+}
+
+.keyboard-shortcut {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: rgb(122, 122, 122);
+  font-size: 12px;
+  border: 1px solid rgb(222, 226, 230);
+  border-radius: 2px;
+  height: 24px;
+  padding: 0 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #7952b3;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.table-container {
+  position: relative;
+}
+
+.spinner {
+  text-align: center;
+  font-size: 18px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 8px;
+  border: 1px solid rgb(222, 226, 230);
+  text-align: left;
+}
+
+.data-table td .country-col {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.data-table th {
+  font-weight: 700;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination-button {
+  padding: 8px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(222, 226, 230);
+  min-width: 40px
+}
+
+.per-page-container,
+.limit-container {
+  display: flex;
+  align-items: center;
+}
+
+.per-page-container input,
+.limit-container input {
+  width: 50px;
+  margin-left: 10px;
+  border: 1px solid rgb(222, 226, 230);
+  padding: 8px;
+}
